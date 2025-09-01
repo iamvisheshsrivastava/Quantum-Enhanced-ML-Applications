@@ -1,9 +1,9 @@
-# numeric stack (Py3.11 wheels available)
+# numeric stack (Py 3.11 wheels available)
 numpy==1.26.4
 scipy==1.11.4
 pandas==2.1.4
 
-# qiskit pins that have Py3.11 wheels
+# qiskit pins with Py 3.11 wheels
 qiskit-terra==1.0.2
 qiskit-aer==0.12.2
 
