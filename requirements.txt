@@ -1,17 +1,17 @@
 # Core scientific stack
-numpy
-scipy
-matplotlib
-pandas
-scikit-learn
+numpy==1.26.4
+scipy==1.13.1
+matplotlib==3.9.0
+pandas==2.2.2
+scikit-learn==1.5.0
 
-# Quantum computing (force modern Sampler API)
-qiskit>=1.0.2
-qiskit-aer>=0.13.3
+# Quantum computing (modern versions with Sampler)
+qiskit==1.0.2
+qiskit-aer==0.13.3
 
 # App
-streamlit
-python-dotenv
+streamlit==1.37.0
+python-dotenv==1.0.1
 
 # Optional (visualizations)
-seaborn
+seaborn==0.13.2
