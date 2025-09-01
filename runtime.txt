@@ -1,1 +1,10 @@
-python-3.11.9
+# numeric stack
+numpy==1.26.4
+scipy==1.11.3
+pandas==2.1.4
+
+# quantum computing (use meta-package to avoid solver errors)
+qiskit==1.0.2
+
+# app
+streamlit>=1.32,<2
