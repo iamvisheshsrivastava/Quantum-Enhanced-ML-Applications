@@ -1,0 +1,47 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Results / logs / temp files
+results/
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# Configs and secrets
+*.env
+*.json
+*.yaml
+*.yml
+*.cfg
+
+# Test / coverage reports
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Package manager locks
+poetry.lock
+Pipfile.lock

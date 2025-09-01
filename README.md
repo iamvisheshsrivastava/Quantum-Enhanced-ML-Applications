@@ -1,135 +1,198 @@
-# Quantum-Enhanced-ML-Applications  
-**⚠️ This repository is a work in progress and currently under development. Contributions and feedback are welcome!**
+# 🌌 Quantum‑Enhanced ML Applications
 
-## Overview  
-This repository explores the implementation of **hybrid quantum-classical machine learning algorithms**, inspired by cutting-edge research in quantum-enhanced machine learning. The focus is on leveraging quantum computing platforms like **Qiskit**, **Cirq**, and others to solve problems in computer vision and beyond.
+An open‑source project exploring **hybrid quantum–classical machine learning** with a modern, interactive UI.
+Built on **Qiskit ≥ 1.x (Sampler API)**, **SciPy optimizers**, and a **Streamlit** app for demos.
 
-Key highlights include:
-- **Hybrid Models:** Combining quantum and classical computing approaches.
-- **Quantum Algorithms:** Exploring data re-uploading schemes, patch-based GANs, and quantum-enhanced optimization.
-- **Applications:** Practical implementations for tasks such as image classification, feature extraction, and generative modeling.
+> ⚠️ Work in progress — contributions & feedback are welcome!
 
-## Project Goals  
-1. Demonstrate the potential of quantum computing in enhancing traditional ML tasks.  
-2. Implement algorithms discussed in quantum ML research papers.  
-3. Provide clear and reproducible code for hybrid quantum-classical models.  
-4. Serve as a learning resource for quantum ML enthusiasts.  
+---
 
-## Features  
-- **Quantum Data Re-Uploading:** Implementing quantum circuits for efficient data encoding and iterative processing.  
-- **Patch-Based Generative Adversarial Networks (GANs):** Enhancing image generation with quantum elements.  
-- **Quantum Optimization:** Solving ML optimization problems with quantum algorithms.  
-- **Visualization:** Using tools to visualize quantum circuits and results.  
+## 🚀 Overview
 
-## Technologies Used  
-- **Quantum Computing Frameworks:**  
-  - [Qiskit](https://qiskit.org/) (IBM)  
-  - [Cirq](https://quantumai.google/cirq) (Google)  
-  - [TensorFlow Quantum](https://www.tensorflow.org/quantum)  
+This repository demonstrates how quantum computing can augment traditional ML workflows on small datasets:
 
-- **Programming Language:** Python  
+* **Hybrid models**: parameterized quantum circuits trained with classical optimizers.
+* **Modern Qiskit**: uses the **Sampler** primitive (no deprecated OpFlow/QuantumInstance).
+* **Interactive UI**: Streamlit web app to train, evaluate, and run live inference.
+* **Visuals**: confusion matrix, accuracy, circuit preview, and downloadable predictions.
 
-- **Libraries:**  
-  - `numpy`, `scikit-learn`, `matplotlib` for classical ML.  
-  - Quantum SDK libraries (Qiskit, Cirq) for quantum implementations.  
+---
 
-- **Platforms:**  
-  - IBM Quantum for Qiskit-based experiments.  
-  - Google Quantum AI for Cirq-based models.  
+## ✨ Features
 
-## Repository Structure  
+* 🧩 Parameterized quantum classifier (feature‑encoded rotations + trainable gates).
+* ⚛️ **Qiskit Sampler** back‑end and **Aer** simulators.
+* 📊 Training & evaluation on the **Iris** dataset.
+* 🔮 Inference playground (feature sliders → instant prediction).
+* 🧱 Circuit rendering (matplotlib drawer).
+* 🌐 One‑click Streamlit UI for demos.
+
+---
+
+## 🗂 Repository Structure
+
 ```
-Quantum-Enhanced-ML-Applications/  
-│  
-├── data/  
-│   ├── raw/                  # Raw datasets used in experiments  
-│   └── processed/            # Preprocessed datasets  
-│  
-├── models/  
-│   ├── quantum_data_reuploading/   # Quantum data re-uploading implementation  
-│   └── patch_gan/                  # Patch GAN with quantum circuits  
-│  
-├── notebooks/  
-│   ├── experiments.ipynb      # Jupyter notebooks for model experiments  
-│   └── visualization.ipynb    # Quantum circuit and result visualization  
-│  
-├── src/  
-│   ├── utils.py               # Utility scripts for preprocessing and evaluation  
-│   └── quantum_models.py      # Implementation of hybrid quantum-classical models  
-│  
-├── results/                   # Results and logs from experiments  
-│  
-└── README.md                  # Repository documentation  
+Quantum-Enhanced-ML-Applications/
+│
+├─ notebooks/                 # Optional exploratory notebooks
+├─ results/                   # Lightweight logs & predictions (no large files)
+├─ src/
+│  ├─ quantum_models.py       # Sampler-based classifier (Qiskit ≥ 1.x)
+│  ├─ utils.py                # Data loading & preprocessing (Iris)
+│  └─ visualization_utils.py  # Plotting helpers
+│
+├─ run_experiment.py          # CLI runner: train + evaluate
+├─ streamlit_app.py           # 🌐 Streamlit UI
+├─ requirements.txt           # Dependencies
+├─ LICENSE
+└─ README.md
 ```
 
-## Getting Started  
-### Prerequisites  
-1. Python 3.8+  
-2. Install the required libraries using the following command:  
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Set up access to a quantum computing platform:  
-   - For Qiskit: [IBM Quantum](https://quantum-computing.ibm.com/)  
-   - For Cirq: [Google Quantum AI](https://quantumai.google/)  
+---
 
-### Installation  
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/iamvisheshsrivastava/Quantum-Enhanced-ML-Applications.git
-   cd Quantum-Enhanced-ML-Applications
-   ```
-2. Set up a virtual environment:  
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```
+## ⚙️ Getting Started
 
-### Usage  
-1. Explore the Jupyter notebooks in the `notebooks/` folder to understand individual experiments.  
-2. Modify the configuration in `src/quantum_models.py` to run different models.  
-3. Run experiments directly from the terminal:  
-   ```bash
-   python src/quantum_models.py
-   ```
+### Prerequisites
 
-## Roadmap  
-- [x] Initial setup of the repository  
-- [x] Implementation of quantum data re-uploading scheme  
-- [ ] Implementation of patch-based GAN with quantum elements  
-- [ ] Optimization experiments using quantum annealing  
-- [ ] Adding more datasets for testing and validation  
+* Python **3.10–3.12** recommended
+* (Windows) Microsoft C++ Build Tools may help for scientific wheels
 
-## Contributing  
-Contributions are welcome! Please follow these steps:  
-1. Fork the repository.  
-2. Create a new branch for your feature or fix:  
-   ```bash
-   git checkout -b feature-name
-   ```  
-3. Commit your changes:  
-   ```bash
-   git commit -m "Add new feature"  
-   ```  
-4. Push to the branch:  
-   ```bash
-   git push origin feature-name
-   ```  
-5. Submit a pull request.  
+### 1) Clone & create a virtual environment
 
-## License  
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```bash
+git clone https://github.com/iamvisheshsrivastava/Quantum-Enhanced-ML-Applications.git
+cd Quantum-Enhanced-ML-Applications
 
-## References  
-1. [Exploring Quantum-Enhanced Machine Learning](https://arxiv.org/abs/2404.02177)  
-2. [Qiskit Documentation](https://qiskit.org/documentation/)  
-3. [Cirq Documentation](https://quantumai.google/cirq/documentation/)  
+# Windows (PowerShell)
+python -m venv venv
+./venv/Scripts/Activate.ps1
 
-## Contact  
-For any questions or suggestions, feel free to reach out:  
-- **Email:** srivastava.vishesh9@gmail.com  
-- **LinkedIn:** [Vishesh Srivastava](https://www.linkedin.com/in/iamvisheshsrivastava/)  
+# macOS/Linux
+python -m venv venv
+source venv/bin/activate
+```
+
+### 2) Install dependencies
+
+```bash
+python -m pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
+```
+
+If you don’t use the requirements file:
+
+```bash
+pip install qiskit qiskit-aer qiskit-machine-learning streamlit scikit-learn numpy matplotlib pandas python-dotenv
+```
+
+---
+
+## ▶️ Run the Streamlit App (recommended)
+
+```bash
+streamlit run streamlit_app.py
+```
+
+What you get:
+
+* **Train / Re‑train** button (COBYLA via SciPy, configurable iterations)
+* Metrics (accuracy, loss) + **confusion matrix**
+* **Inference playground** (feature sliders → prediction)
+* **Circuit preview** via Qiskit drawer
+* **Download CSV** of predictions
+
+> Tip: The app can "match qubits to features" so Iris (4 features) uses 4 qubits automatically.
+
+---
+
+## 🧪 Run From CLI
+
+```bash
+python run_experiment.py
+```
+
+This script loads the Iris dataset, trains the classifier, predicts on the test split, and renders a confusion matrix.
+
+---
+
+## 🔐 (Optional) IBM Quantum Access
+
+You can keep everything on simulators, or run on IBM Quantum later.
+
+1. Create an IBM Quantum account and API token.
+2. Add a local `.env` (already git‑ignored):
+
+```env
+IBM_QUANTUM_TOKEN=your_token_here
+```
+
+3. In code, read the token with `python-dotenv` and select an IBM backend (future toggle in the app).
+
+> Never commit your token. `.env` is already ignored by `.gitignore`.
+
+---
+
+## 📦 requirements.txt (reference)
+
+```txt
+# Core scientific stack
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+
+# Quantum computing
+qiskit
+qiskit-aer
+qiskit-machine-learning  # optional but handy
+
+# App & utils
+streamlit
+python-dotenv
+```
+
+---
+
+## 🛠️ Troubleshooting (Qiskit ≥ 1.x)
+
+* `ModuleNotFoundError: qiskit.opflow` → OpFlow was removed. Use **Sampler** and standard measurements.
+* `QuantumInstance` missing → removed. Use **Sampler/Estimator** primitives instead.
+* `bind_parameters` missing → renamed to **`assign_parameters`**.
+* `qiskit.algorithms.optimizers` missing → use **SciPy**: `from scipy.optimize import minimize` with `method="COBYLA"`.
+* Simulators not found → ensure **`qiskit-aer`** is installed.
+
+---
+
+## 🧭 Roadmap
+
+* IBM hardware toggle in the UI (simulator vs real backend)
+* Data re‑uploading feature maps & quantum kernels
+* Benchmarks vs classical baselines
+* Parameter save/load, experiment tracking
+* More datasets & visual dashboards
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo & create a feature branch: `git checkout -b feat/name`
+2. Commit changes: `git commit -m "feat: ..."`
+3. Push & open a Pull Request.
+
+Please keep results small; link large assets externally.
+
+---
+
+## 📄 License
+
+MIT — see [`LICENSE`](./LICENSE).
+
+---
+
+## 📫 Contact
+
+* Email: **[srivastava.vishesh9@gmail.com](mailto:srivastava.vishesh9@gmail.com)**
+* LinkedIn: **Vishesh Srivastava**
+
+If you use this project in your work, a star ⭐ on GitHub is appreciated!

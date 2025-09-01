@@ -1,6 +1,21 @@
+# Core scientific stack
 numpy
 scipy
 matplotlib
 scikit-learn
+pandas
+seaborn  # optional, nicer visualizations
+
+# Quantum computing frameworks
 qiskit
+qiskit-aer            # simulators (Aer)
+qiskit-machine-learning  # hybrid quantum-classical ML
+cirq                  # Google quantum simulator
+tensorflow
+tensorflow-quantum    # quantum ML with TensorFlow
+
+# Notebooks & dev tools
 jupyter
+notebook
+jupyterlab
+python-dotenv         # for loading IBM Quantum API keys safely
