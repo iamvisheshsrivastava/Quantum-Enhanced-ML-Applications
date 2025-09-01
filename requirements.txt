@@ -5,9 +5,9 @@ matplotlib
 pandas
 scikit-learn
 
-# Quantum computing
-qiskit
-qiskit-aer
+# Quantum computing (force modern Sampler API)
+qiskit>=1.0.2
+qiskit-aer>=0.13.3
 
 # App
 streamlit
